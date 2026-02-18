@@ -21,3 +21,21 @@ function setBalance(value){
     const balanceElement = document.getElementById("balance")
     balanceElement.innerText = value;
 }
+
+// machine id ---> hide all and show id
+function showOnly(id){
+    const addMoney = document.getElementById("add-money");
+    const cashOut = document.getElementById("cashout")
+    const transaction = document.getElementById("history")
+    // console.log(`add Money- ${addMoney} . Cashout - ${cashOut}`)
+
+    // hide everybody
+    addMoney.classList.add("hidden")
+    cashOut.classList.add("hidden")
+    transaction.classList.add("hidden");
+
+
+    // id element will show
+    const selected = document.getElementById(id);
+    selected.classList.remove("hidden")
+}

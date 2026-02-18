@@ -24,8 +24,23 @@ document.getElementById("add-money-btn").addEventListener("click", function(){
     // 4. pin verify 
     const pin = getValueFromInput("add-money-pin");
     if(pin == "1234"){
-        alert(`Add Money Sucessfully from ${bankAccount} at ${new Date().toLocaleString()} `);
+        alert(`Add Money Sucessfully from ${bankAccount} at ${new Date()} `);
         setBalance(newBalance)
+
+        // 1. get history-container
+        const history = document.getElementById("history-container")
+
+        // 2. create new div
+        const newHistory = document.createElement("div")
+
+        // 3. add innerHTML in new div
+        newHistory.innerHTML = `
+        <div class="transaction-card p-5 bg-base-100">
+            Add Money Sucessfully from ${bankAccount}, account number ${accoutNo} at ${new Date()}
+        </div>
+        `
+        // 4. append newDiv in history container
+        history.append(newHistory);
     }
     else{
         alert("Invalid pin");
