@@ -1,4 +1,4 @@
-console.log("Machine Added ")
+// console.log("Machine Added ")
 
 // machine id --> input value
 function getValueFromInput(id){
