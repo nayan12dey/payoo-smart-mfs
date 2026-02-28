@@ -29,7 +29,8 @@ function showOnly(id){
     const sendMoney = document.getElementById("send-money");
     const transaction = document.getElementById("history");
     const getBonus = document.getElementById("get-bonus");
-    console.log(`add Money- ${addMoney} . Cashout - ${cashOut} . Send Money - ${sendMoney} Get Bonus - ${getBonus}`);
+    const payBill = document.getElementById("pay-bill")
+    console.log(`add Money- ${addMoney} . Cashout - ${cashOut} . Send Money - ${sendMoney} Get Bonus - ${getBonus} Pay Bill -${payBill}`);
 
     // hide everybody
     addMoney.classList.add("hidden");
@@ -37,6 +38,8 @@ function showOnly(id){
     sendMoney.classList.add("hidden");
     transaction.classList.add("hidden");
     getBonus.classList.add("hidden");
+    payBill.classList.add("hidden");
+
 
 
     // id element will show
